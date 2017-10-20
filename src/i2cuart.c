@@ -5,7 +5,7 @@
 int main()
 {
     n_io_handle_t usart_handle, twi_handle;
-    n_usart_enable(N_USART_8BIT, N_USART_PARITY_NONE, N_USART_STOPBIT1, 115200);
+    n_usart_enable(N_USART_MODE_ASYNC, N_USART_8BIT, N_USART_PARITY_NONE, N_USART_STOPBIT1, 9600);
     twi_handle = n_twi_new_slave_io(0x04, 100);
     usart_handle = n_usart_new_io(100);
     n_debug_init(usart_handle);
